@@ -1,0 +1,26 @@
+.falling-fruit-container {
+    position: fixed; /* Fixed position to make fruits fall from the top */
+    width: 100vw;
+    height: 100vh; /* Full height to ensure fruits fall within the viewport */
+    overflow: hidden; /* Prevent overflow from falling fruits */
+    pointer-events: none; /* Allow clicks to go through to other elements */
+  }
+  
+  .falling-fruit {
+    position: absolute; /* Allow positioning based on left property */
+    top: -5vw; /* Start above the viewport */
+    font-size: 3rem; /* Adjust size as needed */
+    animation-name: fall;
+    animation-timing-function: linear; /* Smooth falling effect */
+    animation-fill-mode: forwards; /* Retain final state after animation */
+  }
+  
+  @keyframes fall {
+    from {
+      transform: translateY(0); /* Start from the top */
+    }
+    to {
+      transform: translateY(calc(100vh + 5vw)); /* Move to the bottom of the viewport */
+    }
+  }
+  

@@ -1,0 +1,117 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Prevent scrollbars from appearing */
+}
+
+.file-upload {
+    background-color: #d3f9d8; /* Light green background */
+    min-height: 100vh; /* Full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    color: #333; /* Darker text color for contrast */
+    text-align: center; /* Center text within the component */
+    position: relative; /* Ensure this has a positioning context */
+    z-index: 1; /* Ensure this is above the falling objects */
+}
+
+.file-upload h1 {
+    font-size: calc(10px + 2vmin); /* Responsive font size */
+}
+
+.file-upload input[type="file"] {
+    margin: 10px;
+}
+
+.file-upload button {
+    margin: 10px; /* Add margin around the buttons for spacing */
+    background-color: rgb(5, 249, 127); /* Dark green */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 25px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for button */
+    font-weight: bold; /* Bold text */
+    font-size: 1rem; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.5s ease; /* Smooth transition for background color */
+}
+
+.file-upload button:hover {
+    background-color: rgb(0, 162, 255); /* Light blue on hover */
+}
+
+/* Additional button styles for the Show Available Classes button */
+.file-upload .show-classes-button {
+    margin-left: -2px; /* Additional left margin for space between buttons */
+}
+
+.fruit {
+    top: 20%; /* Position near the top of the screen */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust positioning to center only horizontally */
+    font-size: 5rem; /* Increase the font size */
+    background-image: linear-gradient(to right, rgb(0, 162, 255), rgb(5, 249, 127));
+    -webkit-background-clip: text; /* Clip the background to text */
+    -webkit-text-fill-color: transparent; /* Make the text color transparent */
+    background-size: 100%;
+    z-index: 1000; /* Ensure this text is above all other elements */
+}
+
+.classes-popup {
+    position: fixed; /* Fixed positioning */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the popup */
+    background-color: #34683b; /* Banana yellow background */
+    padding: 20px; /* Add some padding */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    z-index: 1000; /* Ensure the popup is above other elements */
+    max-width: 600px; /* Maximum width to make it rectangular */
+}
+
+.classes-popup h4 {
+    margin-bottom: 10px; /* Spacing below the title */
+    background-image: linear-gradient(to right, rgb(0, 162, 255), rgb(5, 249, 127)); /* Gradient for the header text */
+    -webkit-background-clip: text; /* Clip the background to text */
+    -webkit-text-fill-color: transparent; /* Make the text color transparent */
+    padding: 10px; /* Padding for list items */
+    border-radius: 4px; /* Rounded corners for list items */
+    text-align: center; /* Center text within the list items */
+    font-size: 2rem; /* Increased font size */
+}
+
+.classes-popup ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    display: grid; /* Use grid layout for the list */
+    grid-template-columns: repeat(5, 1fr); /* 5 items per row */
+    gap: 10px; /* Space between items */
+}
+
+.classes-popup li {
+    background-image: linear-gradient(to right, rgb(0, 162, 255), rgb(5, 249, 127)); /* Gradient for list items */
+    -webkit-background-clip: text; /* Clip the background to text */
+    -webkit-text-fill-color: transparent; /* Make the text color transparent */
+    padding: 10px; /* Padding for list items */
+    border-radius: 4px; /* Rounded corners for list items */
+    text-align: center; /* Center text within the list items */
+}
+
+.classes-popup button {
+    margin-top: 10px; /* Space above the button */
+}
+
+.file-upload-label {
+    background-image: linear-gradient(to right, rgb(0, 162, 255), rgb(5, 249, 127)); /* Linear gradient */
+    -webkit-background-clip: text; /* Clip the background to text */
+    -webkit-text-fill-color: transparent; /* Make the text color transparent */
+    font-size: 1.2rem; /* Adjust font size if necessary */
+    margin: 10px 0; /* Add some margin for spacing */
+    display: inline-block; /* Ensure the label behaves like a block element for styling */
+}
+
+
